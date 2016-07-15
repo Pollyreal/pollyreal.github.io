@@ -11,7 +11,7 @@ duoshuo: pollyng
 weibo: 373285694@qq.com
 github: Pollyreal
 githubrepo: pollyreal.github.io
-pygments: true
+rouge: true
 safe: true
 paginate: 20
 about: "欢迎观赏、建议、拍砖……"
