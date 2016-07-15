@@ -1,0 +1,16 @@
+markdown: rdiscount
+permalink: /:title/
+url: http://pollyreal.github.io
+name: PollyNg
+author: Polly Ng
+qq: 373285694
+email: pollyng@foxmail.com
+# duoshuo: yonsm
+# beian: 浙ICP备12026616号
+# cnzz: 119959
+weibo: Elepant_Juice
+github: Pollyreal
+pygments: true
+safe: true
+paginate: 20
+about: "欢迎观赏、建议、拍砖……"
