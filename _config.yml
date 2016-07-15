@@ -1,4 +1,4 @@
-markdown: rdiscount
+# markdown: rdiscount
 permalink: /:title/
 url: http://pollyreal.github.io
 name: PollyNg
