@@ -3,7 +3,7 @@ date: 2016-07-27 09:26:31+00:00
 layout: post
 title: class A <T> where T:new()是什么意思
 categories: C#
-tags: C#
+tags: C# 泛型类声明
 ---
 
 
