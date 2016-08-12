@@ -23,3 +23,9 @@ asp.net MVC提供了许多内置的保护机制：默认利用HTML辅助方法�
 在不需要通过客户端脚本访问cookie时，使用HTTP-only cookie。
 请记住，外部输入不是显式的表单域，因为它包括URL查询字符串、隐藏表单域、Ajax请求以及我们使用的外部Web服务结果等。
 强烈建议使用AntiXSS库。
+
+威胁：
+1自满
+2跨站脚本攻击（XSS）：使用HTML编码所有内容。编码特性。记住JavaScript编码。如有可能，使用AntiXSS类。
+3跨站请求伪造（CSRF）：令牌验证。幂等的GET请求。HttpReferrer验证。
+4重复提交：使用Bind特性显式地绑定白名单或者拒绝黑名单。
