@@ -13,31 +13,44 @@ tags: C# Json asp.net
 /// 动态获取地址列表  
 /// </summary>  
 /// <returns></returns>  
+`
 [HttpPost]  
 public JsonResult GetAddress()  
 {  
     var provinceList = ApiHelper.Get("/region/getProvince");  
     var prLength = provinceList.Length;  
     List<Models.City> finalList = new List<Models.City>();  
+`
     //所有省  
+`
     while (prLength != 0)  
     {  
         var prIndex = prLength - 1;  
         Models.City province = new Models.City();  
+`
         //省名  
+`
         province.name = provinceList[prIndex].name;  
+`
         //类型为省  
+`
         province.type = 1;  
+`
         //获取省属市  
+`
         var cityList = ApiHelper.Get("/region/getCityByProvince?id=" + provinceList[prIndex].id);  
         var ctLength = cityList.Length;  
         for (var ctIndex = 0; ctIndex < ctLength; ctIndex++)  
         {  
             Models.City city = new Models.City();  
             city.name = cityList[ctIndex].name;  
+`
             //类型为市  
+`
             city.type = 0;  
+`
             //获取市属区  
+`
             var regionList = ApiHelper.Get("/region/getRegionByParent?id=" + cityList[ctIndex].id);  
             var rgLength = regionList.Length;  
             for (var rgIndex = 0; rgIndex < rgLength; rgIndex++)  
@@ -56,8 +69,9 @@ public JsonResult GetAddress()
     return Json(finalList);  
 }  
   
-
+`
 //省市区结构  
+`
 namespace Models  
 {  
     public class City  
@@ -67,9 +81,10 @@ namespace Models
         public virtual List<City> sub { get; set; }  
     }  
 }    
-
+`
 
 //前端获取相应json  
+`
     $.ajax({  
         url:"/user/getaddress",  
         dataType:"json",  
@@ -78,4 +93,6 @@ namespace Models
         success: function (result) {  
             console.log(result);  
             a.smConfig.rawCitiesData = result;  
-        }});    
+        }});   
+        
+`
