@@ -13,8 +13,9 @@ tags: C# Json asp.net
 /// 动态获取地址列表  
 /// </summary>  
 /// <returns></returns>  
-`
+
 [HttpPost]  
+`
 public JsonResult GetAddress()  
 {  
     var provinceList = ApiHelper.Get("/region/getProvince");  
