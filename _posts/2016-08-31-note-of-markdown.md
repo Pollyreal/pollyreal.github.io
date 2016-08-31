@@ -64,9 +64,12 @@ tags: markdown
 |[砰](#jump)|~~呵~~|~~框~~|~~啪~~|
 
 ## 那就来点链接
-[PollyNg](http://pollyng.me "我啊行内链接")
-[控制狂][1]
-[控制狂是参考式链接][1]
+[PollyNg](http://pollyng.me "我啊行内链接")  
+
+[控制狂][1]  
+
+[控制狂是参考式链接][1]  
+
 [1]: http://y.qq.com/portal/song/000t1j9v3NmIOh.html "控制狂"
 
 # 最后
