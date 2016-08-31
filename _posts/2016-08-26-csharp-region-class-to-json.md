@@ -8,7 +8,8 @@ tags: C# Json asp.net
 
 需要从数据库动态获取省市区信息，实现了从数据库读取，并将实例转换为json格式返回。  
 创建相应格式的class，创建实例并填充数据，转换格式即可。  
-```
+
+```csharp
 /// <summary>  
 /// 动态获取地址列表  
 /// </summary>  
@@ -56,9 +57,12 @@ public JsonResult GetAddress()
     }  
     return Json(finalList);  
 }  
+
 ```
+
 //省市区结构  
-```
+
+```csharp
 namespace Models  
 {  
     public class City  
@@ -68,10 +72,11 @@ namespace Models
         public virtual List<City> sub { get; set; }  
     }  
 }   
+
 ```
 
 //前端获取相应json  
-```
+```javascript
 $.ajax({  
     url:"/user/getaddress",  
     dataType:"json",  
