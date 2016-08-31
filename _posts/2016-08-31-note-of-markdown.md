@@ -10,8 +10,11 @@ tags: markdown
 
 ---
 <span id="jump"></span>
-#Markdown学习笔记
+
+#Markdown学习笔记  
+
 ##怎么显示一条标题。  
+
 　　显示了，但没显示全角空格。
 
 * 标题和列表
@@ -33,6 +36,7 @@ tags: markdown
 > haole
 
 ##一段代码
+
 ``` csharp
         public static void Rotate(int[] nums, int k)
         {
@@ -43,13 +47,17 @@ tags: markdown
             Array.Copy(tmp, 0, nums, 0, k);
         }
 ```
-也可以加一句小的行内代码` int [] nums={1,2,3,4,5,6,7}; ` 就像这样。` Rotate(nums, 3);`这样。 
+也可以加一句小的行内代码` int [] nums={1,2,3,4,5,6,7}; ` 就像这样。` Rotate(nums, 3);`这样。  
+
 ##一张图片
-![图片没显示%>_<%](https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3549104949,2425667904&fm=58 "是什么")
+
+![图片没显示%>_<%](https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3549104949,2425667904&fm=58 "是什么")  
 **能**看到*图片*吗 **粗体**和*斜体*
 
 ## 一张表格
+
 ##### 给表格一个title吧
+
 |	一个 	|	两个	|	三个	|	四个|
 |:------|------:|:------:|--------|
 |	左对齐	|	右对齐	|	居中	|	默认居中	|
@@ -60,8 +68,11 @@ tags: markdown
 [控制狂][1]
 [控制狂是参考式链接][1]
 [1]: http://y.qq.com/portal/song/000t1j9v3NmIOh.html "控制狂"
+
 # 最后
+
 ## 砰砰分割线
+
 --------------
 **************
 * * * * * * * *
