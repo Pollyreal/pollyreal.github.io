@@ -3,9 +3,9 @@ date: 2016-09-06 18:13:31+00:00
 layout: post
 title: Git笔记
 categories: 文档
-tags： 笔记 
-
+tags: 笔记 
 ---
+
 # Git笔记
 |功能|命令|备注|
 |----|----|----|
