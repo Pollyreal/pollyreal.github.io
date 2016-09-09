@@ -67,6 +67,19 @@ tags: 笔记
 ![工作区和暂存区](http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0 "工作区和暂存区")
 
 ---
+
+### 工作区和暂存区
+
+ - 目录（工作区）
+     - .git文件夹（版本库）
+         - stage/index（暂存区）
+         - 分支
+
+ 
+![工作区和暂存区](http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0 "工作区和暂存区")
+
+---
+
 ### 远程仓库
 
 1. 创建SSH Key
@@ -85,6 +98,7 @@ Create a new repo
     `$ git push origin master`
 
 ---
+
 ###GitHub
 
 可以推送pull request给官方仓库来贡献代码。
