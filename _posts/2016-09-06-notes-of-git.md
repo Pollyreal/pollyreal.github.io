@@ -68,8 +68,10 @@ tags: 笔记
 
 ---
 ### 远程仓库
+
 1. 创建SSH Key
 `$ ssh-keygen -t rsa -C "youremail@example.com"`
+
 2. 添加远程库 
     - 在GitHub创建一个仓库
 Create a new repo
@@ -84,6 +86,5 @@ Create a new repo
 
 ---
 ###GitHub
+
 可以推送pull request给官方仓库来贡献代码。
-
-
