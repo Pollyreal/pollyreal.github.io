@@ -165,12 +165,34 @@ Int32 index = sb.IndexOf('X');
 ### 用扩展方法扩展各种类型
 - 扩展方法实际是对一个静态方法的调用，所以CLR不会对调用方法的表达式的值进行null值检查
 - 可以为接口类型定义扩展方法
-```csharp
-public static void ShowItems<T>(this IEnumerable<T> collection)
-{
-    foreach(var item in collection)
+    ```csharp
+    public static void ShowItems<T>(this IEnumerable<T> collection)
     {
-        Console.WriteLine(item);
+        foreach(var item in collection)
+        {
+            Console.WriteLine(item);
+        }
     }
-}
-```
+    ```
+    
+    ***扩展方法是Microsoft的LINQ（Language Integrated Query，语言集成查询）技术的基础。***
+- 可为委托类型定义扩展方法，或者为枚举类型添加扩展方法
+- 允许创建一个委托，让它引用一个对象上的扩展方法
+    ```csharp
+    public static void Main()
+    {
+        Action a="Jeff".ShowItems;
+        
+        //调用（Invoke）委托，后者调用（call）ShowItems,
+        //并向它传递对字符串“Jeff”的引用
+        a();
+    }
+    ```
+### 分部方法
+定制类的行为
+
+- 只能在分部类或结构中声明
+- 返回类型始终是void，任何参数不能用out修饰符来标记
+- 声明和实现必须具有完全一致的签名。
+- 如果没有对应的实现部分，便不能在代码中创建一个委托来引用这个分部方法。
+- 总是被视为private方法，禁止添加private关键字。
