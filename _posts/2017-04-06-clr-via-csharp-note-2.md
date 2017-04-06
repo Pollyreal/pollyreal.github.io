@@ -184,5 +184,17 @@ public IEnumerable<string> Get(DateTime dt = default(DateTime))
 在C#中被称为索引器（indexer）
 C#使用数组风格的语法来公开有参属性（索引器）。换句话说，可将索引器看作C#开发人员重载[]操作符的一种方式。
 ### 调用属性访问器方法时的性能
+对于简单的get和set访问器方法，JIT编译器会将代码内联（inline）。这样，使用属性（而不是字段）就没有性能上的损失。
 ### 属性访问器的可访问性
+```csharp
+public class SomeType{
+    private String m_name;
+    public String Name{
+        get { return m_name; }
+        protected set { m_name = value; }
+    }
+}
+```
 ### 泛型属性访问器方法
+属性本质上是方法，而且C#和CLR允许方法是泛型的。但是C#不允许属性引入它自己的泛型类型参数。  
+概念上说，属性时不应该具有行为的。
