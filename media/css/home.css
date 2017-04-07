@@ -15,16 +15,6 @@ font-size:24px;
 font-weight:700;
 }
 }
-@media only screen and (min-width: 600px){
-    #container {
-        width: 100%;
-        padding: 0 2em;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-}
 html {
 font-size:100%;
 -webkit-text-size-adjust:100%;
@@ -499,4 +489,15 @@ float:left;
 
 .pager .next a,.pull-right {
 float:right;
+}
+
+@media only screen and (min-width: 600px){
+    #container {
+        width: 100%;
+        padding: 0 2em;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
 }
