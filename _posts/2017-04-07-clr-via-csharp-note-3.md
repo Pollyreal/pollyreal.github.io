@@ -3,7 +3,7 @@ date: 2017-04-07 15:21:31+00:00
 layout: post
 title: CLR via C#学习笔记3
 categories: 文档
-tags: 笔记 
+tags: 笔记
 ---
 
 [TOC]
@@ -22,11 +22,11 @@ CLR的事件模型建立在**委托**的基础上。委托是调用（唤出）�
 //第一步：定义一个类型来容纳所有应该发送给事件通知接受者的附加信息
 internal class NewMailEventArgs : EventArgs{
     private readonly String m_from, m_to, m_subject;
-    
+
     public NewMailEventArgs(String from, String to, String subject){
         m_from = from; m_to = to; m_subject = subject;
     }
-    
+
     public String From { get { return m_from;} }
     public String To { get { return m_to; } }
     public String Subject { get { return m_subject; } }
