@@ -22,11 +22,11 @@ CLR的事件模型建立在**委托**的基础上。委托是调用（唤出）�
 //第一步：定义一个类型来容纳所有应该发送给事件通知接受者的附加信息
 internal class NewMailEventArgs : EventArgs{
     private readonly String m_from, m_to, m_subject;
-
+    
     public NewMailEventArgs(String from, String to, String subject){
         m_from = from; m_to = to; m_subject = subject;
     }
-
+    
     public String From { get { return m_from;} }
     public String To { get { return m_to; } }
     public String Subject { get { return m_subject; } }
@@ -174,4 +174,4 @@ C#编译器要求将用于实现一个接口的方法标记为public。CLR要求
 - IS-A vs. CAN-DO 关系
 - 易于使用
 - 一致性的实现：不管一个接口的契约文档做得有多好，都无法保证任何人都能百分之百正确地实现它。
-- 版本控制：向结类型添加一个方法，派生类型将继承新方法。向接口添加一个新成员，会强迫接口的继承者更改其源代码并重新编译。
+- 版本控制：向基类型添加一个方法，派生类型将继承新方法。向接口添加一个新成员，会强迫接口的继承者更改其源代码并重新编译。

@@ -189,6 +189,31 @@ Int32 index = sb.IndexOf('X');
     }
     ```
 ### 分部方法
+```csharp
+//工具生成的代码，存储在某个源代码文件中：
+internal sealed partial class Base{
+    private String m_name;
+    // 这是分部方法的声明
+    partial void OnNameChanging(String vlaue);
+    
+    public String Name{
+        get{ return m_name; }
+        set{
+            OnNameChanging(value.ToUpper();
+            m_name = value;
+        }
+    }
+}
+
+//开发人员生成的代码，存储在另一个源代码文件中：
+internal sealed partial class Base{
+    // 这是分部方法的实现，会在m_name更改前调用
+    partial void OnNameChanging(String value){
+        if( String.IsNullOrEmpty(value)) 
+            throw new ArgumentNullException("value");
+    }
+}
+```
 定制类的行为
 
 - 只能在分部类或结构中声明
