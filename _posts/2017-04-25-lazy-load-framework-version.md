@@ -6,7 +6,7 @@ categories: 文档
 tags: 问题 惰性加载
 ---
 
-
+```
 Uncaught TypeError: Cannot read property 'apply' of undefined
     at XMLHttpRequest.desc.get [as ontimeout] (zone.js:1265)
     at XHRLocalObject.AbstractXHRObject._cleanup (abstract-xhr.js:149)
@@ -15,7 +15,7 @@ Uncaught TypeError: Cannot read property 'apply' of undefined
     at ZoneDelegate.invokeTask (zone.js:398)
     at Zone.runTask (zone.js:165)
     at XMLHttpRequest.ZoneTask.invoke (zone.js:460)
-
+```
 ```
 npm install zone.js@0.8.5 --save
 ```
