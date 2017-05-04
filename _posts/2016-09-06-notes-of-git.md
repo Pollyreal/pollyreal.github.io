@@ -92,3 +92,7 @@ Create a new repo
 ### GitHub
 
 可以推送pull request给官方仓库来贡献代码。
+
+
+### 查看log图形
+ `git log --graph --pretty=oneline --abbrev-commit`
