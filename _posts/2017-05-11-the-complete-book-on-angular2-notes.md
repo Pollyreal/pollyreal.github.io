@@ -8,7 +8,7 @@ tags: Angular 前端
 
 [TOC]
 
-### 组件的host配置项
+### 组件的host配置项（与Angular4有区别）
 ```javascript
   @Component{
     selector: '',
@@ -17,7 +17,9 @@ tags: Angular 前端
     template: ``
   }
 ```
-host配置项很有用，可以在组建内部配置宿主元素。例子为给宿主元素添加class为item的CSS类。
+host配置项很有用，可以在组建内部配置宿主元素。例子为给宿主元素添加class为item的CSS类。  
+
+备注：在Angular4中，用 @HostListener @HostBindings @Input @Output 替换了。
 
 
 ### 直接在表达式写三元表达式
