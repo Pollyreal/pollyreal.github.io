@@ -50,7 +50,7 @@
 </p>
 </td>
 <td width="75%">
-<p align="left"><a href="Warr14.htm#483">WarrantyCards</a>
+<p align="left"><a href="Warr14.htm#489">WarrantyCards</a>
 </p>
 </td>
 </tr>
@@ -67,8 +67,8 @@ alter table WarrantyCards<br />
 go<br />
 <br />
 alter table WarrantyCards<br />
-   add constraint FK_WARRANTY_REFERENCE_CUSTOMER foreign key (CustomerId)<br />
-      references Customers (CustomerId)<br />
+   add constraint FK_WARRANTY_REFERENCE_CUSTOMER foreign key (WarrantyOwnerId)<br />
+      references Customers (WarrantyOwnerId)<br />
 go<br />
 
 </p>
@@ -115,11 +115,11 @@ go<br />
 </tr>
 <tr>
 <td>
-<p align="left"><a href="Warr6.htm#22">CustomerId</a>
+<p align="left"><a href="Warr6.htm#22">WarrantyOwnerId</a>
 </p>
 </td>
 <td>
-<p align="left"><a href="Warr14.htm#500">CustomerId</a>
+<p align="left"><a href="Warr14.htm#506">WarrantyOwnerId</a>
 </p>
 </td>
 </tr>

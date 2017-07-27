@@ -85,11 +85,12 @@ go<br />
 create table ProductWarranty (<br />
    ProductWarrantyId    bigint               not null,<br />
    ProductId            bigint               not null,<br />
-   Year                 int                  not null,<br />
-   UpdateYear           datetime             not null,<br />
+   WarrantyYear         int                  not null,<br />
+   CountryId            int                  not null,<br />
    CreationDate         datetime             not null,<br />
-   UpdationDate         datetime             null,<br />
    Enable               bit                  not null,<br />
+   UpdateYear           datetime             not null,<br />
+   UpdationDate         datetime             null,<br />
    constraint PK_PRODUCTWARRANTY primary key (ProductWarrantyId)<br />
 )<br />
 go<br />
@@ -378,21 +379,21 @@ go<br />
 </tr>
 <tr>
 <td>
-<p align="left"><a href="Warr9.htm#234">Year</a>
+<p align="left"><a href="Warr9.htm#234">WarrantyYear</a>
 </p>
 </td>
 <td>
-<p align="left"><a href="Warr9.htm#234">Year</a>
+<p align="left"><a href="Warr9.htm#234">WarrantyYear</a>
 </p>
 </td>
 </tr>
 <tr>
 <td class="TD2">
-<p align="left"><a href="Warr9.htm#240">UpdateYear</a>
+<p align="left"><a href="Warr9.htm#240">CountryId</a>
 </p>
 </td>
 <td class="TD2">
-<p align="left"><a href="Warr9.htm#240">UpdateYear</a>
+<p align="left"><a href="Warr9.htm#240">CountryId</a>
 </p>
 </td>
 </tr>
@@ -408,21 +409,31 @@ go<br />
 </tr>
 <tr>
 <td class="TD2">
-<p align="left"><a href="Warr9.htm#252">UpdationDate</a>
+<p align="left"><a href="Warr9.htm#252">Enable</a>
 </p>
 </td>
 <td class="TD2">
-<p align="left"><a href="Warr9.htm#252">UpdationDate</a>
+<p align="left"><a href="Warr9.htm#252">Enable</a>
 </p>
 </td>
 </tr>
 <tr>
 <td>
-<p align="left"><a href="Warr9.htm#258">Enable</a>
+<p align="left"><a href="Warr9.htm#258">UpdateYear</a>
 </p>
 </td>
 <td>
-<p align="left"><a href="Warr9.htm#258">Enable</a>
+<p align="left"><a href="Warr9.htm#258">UpdateYear</a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="TD2">
+<p align="left"><a href="Warr9.htm#264">UpdationDate</a>
+</p>
+</td>
+<td class="TD2">
+<p align="left"><a href="Warr9.htm#264">UpdationDate</a>
 </p>
 </td>
 </tr>
@@ -606,11 +617,11 @@ go<br />
 </tr>
 <tr>
 <td>
-<p align="left"><a href="Warr9.htm#265">Key_1</a>
+<p align="left"><a href="Warr9.htm#271">Key_1</a>
 </p>
 </td>
 <td>
-<p align="left"><a href="Warr9.htm#265">Key_1</a>
+<p align="left"><a href="Warr9.htm#271">Key_1</a>
 </p>
 </td>
 <td>
@@ -1110,10 +1121,10 @@ go<br />
 </tr>
 </table><br />
 <h2>
-<a name="234">Column Year of the table ProductWarranty</a> 
+<a name="234">Column WarrantyYear of the table ProductWarranty</a> 
 </h2>
 <h3>
-<a name="235">Card of the column Year of the table ProductWarranty</a> 
+<a name="235">Card of the column WarrantyYear of the table ProductWarranty</a> 
 </h3>
 <table class="Form" border="1" cellspacing="1" width="100%">
 <tr>
@@ -1122,7 +1133,7 @@ go<br />
 </p>
 </td>
 <td width="75%">
-<p align="left"><a href="Warr9.htm#234">Year</a>
+<p align="left"><a href="Warr9.htm#234">WarrantyYear</a>
 </p>
 </td>
 </tr>
@@ -1132,7 +1143,7 @@ go<br />
 </p>
 </td>
 <td width="75%">
-<p align="left"><a href="Warr9.htm#234">Year</a>
+<p align="left"><a href="Warr9.htm#234">WarrantyYear</a>
 </p>
 </td>
 </tr>
@@ -1158,15 +1169,15 @@ go<br />
 </tr>
 </table><br />
 <h3>
-<a name="236">Check constraint name of the column Year of the table ProductWarranty</a> 
+<a name="236">Check constraint name of the column WarrantyYear of the table ProductWarranty</a> 
 </h3>
 <table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
-<p align="left">CKC_YEAR_PRODUCTW
+<p align="left">CKC_WARRANTYYEAR_PRODUCTW
 </p>
 </td></tr>
 </table><br />
 <h3>
-<a name="237">Check of the column Year of the table ProductWarranty</a> 
+<a name="237">Check of the column WarrantyYear of the table ProductWarranty</a> 
 </h3>
 <table class="Form" border="1" cellspacing="1" width="100%">
 <tr>
@@ -1261,7 +1272,7 @@ go<br />
 </tr>
 </table><br />
 <h3>
-<a name="238">Server validation rule of the column Year of the table ProductWarranty</a> 
+<a name="238">Server validation rule of the column WarrantyYear of the table ProductWarranty</a> 
 </h3>
 <table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
 <p align="left">%MINMAX% and %LISTVAL% and %UPPER% and %LOWER% and %RULES%
@@ -1269,7 +1280,7 @@ go<br />
 </td></tr>
 </table><br />
 <h3>
-<a name="239">List of extended attributes of the table column Year</a> 
+<a name="239">List of extended attributes of the table column WarrantyYear</a> 
 </h3>
 <table class="Grid" border="1" cellspacing="1" width="100%">
 <tr>
@@ -1418,10 +1429,10 @@ go<br />
 </tr>
 </table><br />
 <h2>
-<a name="240">Column UpdateYear of the table ProductWarranty</a> 
+<a name="240">Column CountryId of the table ProductWarranty</a> 
 </h2>
 <h3>
-<a name="241">Card of the column UpdateYear of the table ProductWarranty</a> 
+<a name="241">Card of the column CountryId of the table ProductWarranty</a> 
 </h3>
 <table class="Form" border="1" cellspacing="1" width="100%">
 <tr>
@@ -1430,7 +1441,7 @@ go<br />
 </p>
 </td>
 <td width="75%">
-<p align="left"><a href="Warr9.htm#240">UpdateYear</a>
+<p align="left"><a href="Warr9.htm#240">CountryId</a>
 </p>
 </td>
 </tr>
@@ -1440,7 +1451,7 @@ go<br />
 </p>
 </td>
 <td width="75%">
-<p align="left"><a href="Warr9.htm#240">UpdateYear</a>
+<p align="left"><a href="Warr9.htm#240">CountryId</a>
 </p>
 </td>
 </tr>
@@ -1450,7 +1461,7 @@ go<br />
 </p>
 </td>
 <td width="75%">
-<p align="left">datetime
+<p align="left">int
 </p>
 </td>
 </tr>
@@ -1466,15 +1477,15 @@ go<br />
 </tr>
 </table><br />
 <h3>
-<a name="242">Check constraint name of the column UpdateYear of the table ProductWarranty</a> 
+<a name="242">Check constraint name of the column CountryId of the table ProductWarranty</a> 
 </h3>
 <table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
-<p align="left">CKC_UPDATEYEAR_PRODUCTW
+<p align="left">CKC_COUNTRYID_PRODUCTW
 </p>
 </td></tr>
 </table><br />
 <h3>
-<a name="243">Check of the column UpdateYear of the table ProductWarranty</a> 
+<a name="243">Check of the column CountryId of the table ProductWarranty</a> 
 </h3>
 <table class="Form" border="1" cellspacing="1" width="100%">
 <tr>
@@ -1569,7 +1580,7 @@ go<br />
 </tr>
 </table><br />
 <h3>
-<a name="244">Server validation rule of the column UpdateYear of the table ProductWarranty</a> 
+<a name="244">Server validation rule of the column CountryId of the table ProductWarranty</a> 
 </h3>
 <table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
 <p align="left">%MINMAX% and %LISTVAL% and %UPPER% and %LOWER% and %RULES%
@@ -1577,7 +1588,7 @@ go<br />
 </td></tr>
 </table><br />
 <h3>
-<a name="245">List of extended attributes of the table column UpdateYear</a> 
+<a name="245">List of extended attributes of the table column CountryId</a> 
 </h3>
 <table class="Grid" border="1" cellspacing="1" width="100%">
 <tr>
@@ -2034,10 +2045,10 @@ go<br />
 </tr>
 </table><br />
 <h2>
-<a name="252">Column UpdationDate of the table ProductWarranty</a> 
+<a name="252">Column Enable of the table ProductWarranty</a> 
 </h2>
 <h3>
-<a name="253">Card of the column UpdationDate of the table ProductWarranty</a> 
+<a name="253">Card of the column Enable of the table ProductWarranty</a> 
 </h3>
 <table class="Form" border="1" cellspacing="1" width="100%">
 <tr>
@@ -2046,7 +2057,7 @@ go<br />
 </p>
 </td>
 <td width="75%">
-<p align="left"><a href="Warr9.htm#252">UpdationDate</a>
+<p align="left"><a href="Warr9.htm#252">Enable</a>
 </p>
 </td>
 </tr>
@@ -2056,7 +2067,7 @@ go<br />
 </p>
 </td>
 <td width="75%">
-<p align="left"><a href="Warr9.htm#252">UpdationDate</a>
+<p align="left"><a href="Warr9.htm#252">Enable</a>
 </p>
 </td>
 </tr>
@@ -2066,7 +2077,7 @@ go<br />
 </p>
 </td>
 <td width="75%">
-<p align="left">datetime
+<p align="left">bit
 </p>
 </td>
 </tr>
@@ -2076,21 +2087,21 @@ go<br />
 </p>
 </td>
 <td width="75%">
-<p align="left">No
+<p align="left">Yes
 </p>
 </td>
 </tr>
 </table><br />
 <h3>
-<a name="254">Check constraint name of the column UpdationDate of the table ProductWarranty</a> 
+<a name="254">Check constraint name of the column Enable of the table ProductWarranty</a> 
 </h3>
 <table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
-<p align="left">CKC_UPDATIONDATE_PRODUCTW
+<p align="left">CKC_ENABLE_PRODUCTW
 </p>
 </td></tr>
 </table><br />
 <h3>
-<a name="255">Check of the column UpdationDate of the table ProductWarranty</a> 
+<a name="255">Check of the column Enable of the table ProductWarranty</a> 
 </h3>
 <table class="Form" border="1" cellspacing="1" width="100%">
 <tr>
@@ -2185,7 +2196,7 @@ go<br />
 </tr>
 </table><br />
 <h3>
-<a name="256">Server validation rule of the column UpdationDate of the table ProductWarranty</a> 
+<a name="256">Server validation rule of the column Enable of the table ProductWarranty</a> 
 </h3>
 <table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
 <p align="left">%MINMAX% and %LISTVAL% and %UPPER% and %LOWER% and %RULES%
@@ -2193,7 +2204,623 @@ go<br />
 </td></tr>
 </table><br />
 <h3>
-<a name="257">List of extended attributes of the table column UpdationDate</a> 
+<a name="257">List of extended attributes of the table column Enable</a> 
+</h3>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header">
+<p align="center">Name
+</p>
+</td>
+<td class="Header">
+<p align="center">Data Type
+</p>
+</td>
+<td class="Header">
+<p align="center">Value
+</p>
+</td>
+<td class="Header">
+<p align="center">Target Name
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">ExtCkcNotForReplication
+</p>
+</td>
+<td>
+<p align="left">(Boolean)
+</p>
+</td>
+<td>
+<p align="left">false
+</p>
+</td>
+<td>
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+<tr>
+<td class="TD2">
+<p align="left">ExtCollation
+</p>
+</td>
+<td class="TD2">
+<p align="left">(String)
+</p>
+</td>
+<td class="TD2">
+<p align="left">&nbsp; 
+</p>
+</td>
+<td class="TD2">
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">ExtDeftConstName
+</p>
+</td>
+<td>
+<p align="left">(String)
+</p>
+</td>
+<td>
+<p align="left">&nbsp; 
+</p>
+</td>
+<td>
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+<tr>
+<td class="TD2">
+<p align="left">ExtIdentitySeedInc
+</p>
+</td>
+<td class="TD2">
+<p align="left">(String)
+</p>
+</td>
+<td class="TD2">
+<p align="left">&nbsp; 
+</p>
+</td>
+<td class="TD2">
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">ExtIdtNotForReplication
+</p>
+</td>
+<td>
+<p align="left">(Boolean)
+</p>
+</td>
+<td>
+<p align="left">false
+</p>
+</td>
+<td>
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+<tr>
+<td class="TD2">
+<p align="left">ExtNullConstName
+</p>
+</td>
+<td class="TD2">
+<p align="left">(String)
+</p>
+</td>
+<td class="TD2">
+<p align="left">&nbsp; 
+</p>
+</td>
+<td class="TD2">
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">ExtRowGuidCol
+</p>
+</td>
+<td>
+<p align="left">(Boolean)
+</p>
+</td>
+<td>
+<p align="left">false
+</p>
+</td>
+<td>
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+</table><br />
+<h2>
+<a name="258">Column UpdateYear of the table ProductWarranty</a> 
+</h2>
+<h3>
+<a name="259">Card of the column UpdateYear of the table ProductWarranty</a> 
+</h3>
+<table class="Form" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="25%">
+<p align="left">Name
+</p>
+</td>
+<td width="75%">
+<p align="left"><a href="Warr9.htm#258">UpdateYear</a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Code
+</p>
+</td>
+<td width="75%">
+<p align="left"><a href="Warr9.htm#258">UpdateYear</a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Data Type
+</p>
+</td>
+<td width="75%">
+<p align="left">datetime
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Mandatory
+</p>
+</td>
+<td width="75%">
+<p align="left">Yes
+</p>
+</td>
+</tr>
+</table><br />
+<h3>
+<a name="260">Check constraint name of the column UpdateYear of the table ProductWarranty</a> 
+</h3>
+<table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
+<p align="left">CKC_UPDATEYEAR_PRODUCTW
+</p>
+</td></tr>
+</table><br />
+<h3>
+<a name="261">Check of the column UpdateYear of the table ProductWarranty</a> 
+</h3>
+<table class="Form" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="25%">
+<p align="left">Minimum Value
+</p>
+</td>
+<td width="75%">
+<p align="left">&nbsp; 
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Maximum Value
+</p>
+</td>
+<td width="75%">
+<p align="left">&nbsp; 
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Default Value
+</p>
+</td>
+<td width="75%">
+<p align="left">&nbsp; 
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Unit
+</p>
+</td>
+<td width="75%">
+<p align="left">&nbsp; 
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Format
+</p>
+</td>
+<td width="75%">
+<p align="left">&nbsp; 
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Uppercase
+</p>
+</td>
+<td width="75%">
+<p align="left">No
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Lowercase
+</p>
+</td>
+<td width="75%">
+<p align="left">No
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Cannot Modify
+</p>
+</td>
+<td width="75%">
+<p align="left">No
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">List Of Values
+</p>
+</td>
+<td width="75%">
+<p align="left">&nbsp; 
+</p>
+</td>
+</tr>
+</table><br />
+<h3>
+<a name="262">Server validation rule of the column UpdateYear of the table ProductWarranty</a> 
+</h3>
+<table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
+<p align="left">%MINMAX% and %LISTVAL% and %UPPER% and %LOWER% and %RULES%
+</p>
+</td></tr>
+</table><br />
+<h3>
+<a name="263">List of extended attributes of the table column UpdateYear</a> 
+</h3>
+<table class="Grid" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header">
+<p align="center">Name
+</p>
+</td>
+<td class="Header">
+<p align="center">Data Type
+</p>
+</td>
+<td class="Header">
+<p align="center">Value
+</p>
+</td>
+<td class="Header">
+<p align="center">Target Name
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">ExtCkcNotForReplication
+</p>
+</td>
+<td>
+<p align="left">(Boolean)
+</p>
+</td>
+<td>
+<p align="left">false
+</p>
+</td>
+<td>
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+<tr>
+<td class="TD2">
+<p align="left">ExtCollation
+</p>
+</td>
+<td class="TD2">
+<p align="left">(String)
+</p>
+</td>
+<td class="TD2">
+<p align="left">&nbsp; 
+</p>
+</td>
+<td class="TD2">
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">ExtDeftConstName
+</p>
+</td>
+<td>
+<p align="left">(String)
+</p>
+</td>
+<td>
+<p align="left">&nbsp; 
+</p>
+</td>
+<td>
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+<tr>
+<td class="TD2">
+<p align="left">ExtIdentitySeedInc
+</p>
+</td>
+<td class="TD2">
+<p align="left">(String)
+</p>
+</td>
+<td class="TD2">
+<p align="left">&nbsp; 
+</p>
+</td>
+<td class="TD2">
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">ExtIdtNotForReplication
+</p>
+</td>
+<td>
+<p align="left">(Boolean)
+</p>
+</td>
+<td>
+<p align="left">false
+</p>
+</td>
+<td>
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+<tr>
+<td class="TD2">
+<p align="left">ExtNullConstName
+</p>
+</td>
+<td class="TD2">
+<p align="left">(String)
+</p>
+</td>
+<td class="TD2">
+<p align="left">&nbsp; 
+</p>
+</td>
+<td class="TD2">
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">ExtRowGuidCol
+</p>
+</td>
+<td>
+<p align="left">(Boolean)
+</p>
+</td>
+<td>
+<p align="left">false
+</p>
+</td>
+<td>
+<p align="left">Microsoft SQL Server 2008
+</p>
+</td>
+</tr>
+</table><br />
+<h2>
+<a name="264">Column UpdationDate of the table ProductWarranty</a> 
+</h2>
+<h3>
+<a name="265">Card of the column UpdationDate of the table ProductWarranty</a> 
+</h3>
+<table class="Form" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="25%">
+<p align="left">Name
+</p>
+</td>
+<td width="75%">
+<p align="left"><a href="Warr9.htm#264">UpdationDate</a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Code
+</p>
+</td>
+<td width="75%">
+<p align="left"><a href="Warr9.htm#264">UpdationDate</a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Data Type
+</p>
+</td>
+<td width="75%">
+<p align="left">datetime
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Mandatory
+</p>
+</td>
+<td width="75%">
+<p align="left">No
+</p>
+</td>
+</tr>
+</table><br />
+<h3>
+<a name="266">Check constraint name of the column UpdationDate of the table ProductWarranty</a> 
+</h3>
+<table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
+<p align="left">CKC_UPDATIONDATE_PRODUCTW
+</p>
+</td></tr>
+</table><br />
+<h3>
+<a name="267">Check of the column UpdationDate of the table ProductWarranty</a> 
+</h3>
+<table class="Form" border="1" cellspacing="1" width="100%">
+<tr>
+<td class="Header" width="25%">
+<p align="left">Minimum Value
+</p>
+</td>
+<td width="75%">
+<p align="left">&nbsp; 
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Maximum Value
+</p>
+</td>
+<td width="75%">
+<p align="left">&nbsp; 
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Default Value
+</p>
+</td>
+<td width="75%">
+<p align="left">&nbsp; 
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Unit
+</p>
+</td>
+<td width="75%">
+<p align="left">&nbsp; 
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Format
+</p>
+</td>
+<td width="75%">
+<p align="left">&nbsp; 
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Uppercase
+</p>
+</td>
+<td width="75%">
+<p align="left">No
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Lowercase
+</p>
+</td>
+<td width="75%">
+<p align="left">No
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">Cannot Modify
+</p>
+</td>
+<td width="75%">
+<p align="left">No
+</p>
+</td>
+</tr>
+<tr>
+<td class="Header" width="25%">
+<p align="left">List Of Values
+</p>
+</td>
+<td width="75%">
+<p align="left">&nbsp; 
+</p>
+</td>
+</tr>
+</table><br />
+<h3>
+<a name="268">Server validation rule of the column UpdationDate of the table ProductWarranty</a> 
+</h3>
+<table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
+<p align="left">%MINMAX% and %LISTVAL% and %UPPER% and %LOWER% and %RULES%
+</p>
+</td></tr>
+</table><br />
+<h3>
+<a name="269">List of extended attributes of the table column UpdationDate</a> 
 </h3>
 <table class="Grid" border="1" cellspacing="1" width="100%">
 <tr>
@@ -2359,316 +2986,8 @@ go<br />
 </td>
 </tr>
 </table><br />
-<h2>
-<a name="258">Column Enable of the table ProductWarranty</a> 
-</h2>
 <h3>
-<a name="259">Card of the column Enable of the table ProductWarranty</a> 
-</h3>
-<table class="Form" border="1" cellspacing="1" width="100%">
-<tr>
-<td class="Header" width="25%">
-<p align="left">Name
-</p>
-</td>
-<td width="75%">
-<p align="left"><a href="Warr9.htm#258">Enable</a>
-</p>
-</td>
-</tr>
-<tr>
-<td class="Header" width="25%">
-<p align="left">Code
-</p>
-</td>
-<td width="75%">
-<p align="left"><a href="Warr9.htm#258">Enable</a>
-</p>
-</td>
-</tr>
-<tr>
-<td class="Header" width="25%">
-<p align="left">Data Type
-</p>
-</td>
-<td width="75%">
-<p align="left">bit
-</p>
-</td>
-</tr>
-<tr>
-<td class="Header" width="25%">
-<p align="left">Mandatory
-</p>
-</td>
-<td width="75%">
-<p align="left">Yes
-</p>
-</td>
-</tr>
-</table><br />
-<h3>
-<a name="260">Check constraint name of the column Enable of the table ProductWarranty</a> 
-</h3>
-<table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
-<p align="left">CKC_ENABLE_PRODUCTW
-</p>
-</td></tr>
-</table><br />
-<h3>
-<a name="261">Check of the column Enable of the table ProductWarranty</a> 
-</h3>
-<table class="Form" border="1" cellspacing="1" width="100%">
-<tr>
-<td class="Header" width="25%">
-<p align="left">Minimum Value
-</p>
-</td>
-<td width="75%">
-<p align="left">&nbsp; 
-</p>
-</td>
-</tr>
-<tr>
-<td class="Header" width="25%">
-<p align="left">Maximum Value
-</p>
-</td>
-<td width="75%">
-<p align="left">&nbsp; 
-</p>
-</td>
-</tr>
-<tr>
-<td class="Header" width="25%">
-<p align="left">Default Value
-</p>
-</td>
-<td width="75%">
-<p align="left">&nbsp; 
-</p>
-</td>
-</tr>
-<tr>
-<td class="Header" width="25%">
-<p align="left">Unit
-</p>
-</td>
-<td width="75%">
-<p align="left">&nbsp; 
-</p>
-</td>
-</tr>
-<tr>
-<td class="Header" width="25%">
-<p align="left">Format
-</p>
-</td>
-<td width="75%">
-<p align="left">&nbsp; 
-</p>
-</td>
-</tr>
-<tr>
-<td class="Header" width="25%">
-<p align="left">Uppercase
-</p>
-</td>
-<td width="75%">
-<p align="left">No
-</p>
-</td>
-</tr>
-<tr>
-<td class="Header" width="25%">
-<p align="left">Lowercase
-</p>
-</td>
-<td width="75%">
-<p align="left">No
-</p>
-</td>
-</tr>
-<tr>
-<td class="Header" width="25%">
-<p align="left">Cannot Modify
-</p>
-</td>
-<td width="75%">
-<p align="left">No
-</p>
-</td>
-</tr>
-<tr>
-<td class="Header" width="25%">
-<p align="left">List Of Values
-</p>
-</td>
-<td width="75%">
-<p align="left">&nbsp; 
-</p>
-</td>
-</tr>
-</table><br />
-<h3>
-<a name="262">Server validation rule of the column Enable of the table ProductWarranty</a> 
-</h3>
-<table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
-<p align="left">%MINMAX% and %LISTVAL% and %UPPER% and %LOWER% and %RULES%
-</p>
-</td></tr>
-</table><br />
-<h3>
-<a name="263">List of extended attributes of the table column Enable</a> 
-</h3>
-<table class="Grid" border="1" cellspacing="1" width="100%">
-<tr>
-<td class="Header">
-<p align="center">Name
-</p>
-</td>
-<td class="Header">
-<p align="center">Data Type
-</p>
-</td>
-<td class="Header">
-<p align="center">Value
-</p>
-</td>
-<td class="Header">
-<p align="center">Target Name
-</p>
-</td>
-</tr>
-<tr>
-<td>
-<p align="left">ExtCkcNotForReplication
-</p>
-</td>
-<td>
-<p align="left">(Boolean)
-</p>
-</td>
-<td>
-<p align="left">false
-</p>
-</td>
-<td>
-<p align="left">Microsoft SQL Server 2008
-</p>
-</td>
-</tr>
-<tr>
-<td class="TD2">
-<p align="left">ExtCollation
-</p>
-</td>
-<td class="TD2">
-<p align="left">(String)
-</p>
-</td>
-<td class="TD2">
-<p align="left">&nbsp; 
-</p>
-</td>
-<td class="TD2">
-<p align="left">Microsoft SQL Server 2008
-</p>
-</td>
-</tr>
-<tr>
-<td>
-<p align="left">ExtDeftConstName
-</p>
-</td>
-<td>
-<p align="left">(String)
-</p>
-</td>
-<td>
-<p align="left">&nbsp; 
-</p>
-</td>
-<td>
-<p align="left">Microsoft SQL Server 2008
-</p>
-</td>
-</tr>
-<tr>
-<td class="TD2">
-<p align="left">ExtIdentitySeedInc
-</p>
-</td>
-<td class="TD2">
-<p align="left">(String)
-</p>
-</td>
-<td class="TD2">
-<p align="left">&nbsp; 
-</p>
-</td>
-<td class="TD2">
-<p align="left">Microsoft SQL Server 2008
-</p>
-</td>
-</tr>
-<tr>
-<td>
-<p align="left">ExtIdtNotForReplication
-</p>
-</td>
-<td>
-<p align="left">(Boolean)
-</p>
-</td>
-<td>
-<p align="left">false
-</p>
-</td>
-<td>
-<p align="left">Microsoft SQL Server 2008
-</p>
-</td>
-</tr>
-<tr>
-<td class="TD2">
-<p align="left">ExtNullConstName
-</p>
-</td>
-<td class="TD2">
-<p align="left">(String)
-</p>
-</td>
-<td class="TD2">
-<p align="left">&nbsp; 
-</p>
-</td>
-<td class="TD2">
-<p align="left">Microsoft SQL Server 2008
-</p>
-</td>
-</tr>
-<tr>
-<td>
-<p align="left">ExtRowGuidCol
-</p>
-</td>
-<td>
-<p align="left">(Boolean)
-</p>
-</td>
-<td>
-<p align="left">false
-</p>
-</td>
-<td>
-<p align="left">Microsoft SQL Server 2008
-</p>
-</td>
-</tr>
-</table><br />
-<h3>
-<a name="264">List of keys of the table ProductWarranty</a> 
+<a name="270">List of keys of the table ProductWarranty</a> 
 </h3>
 <table class="Grid" border="1" cellspacing="1" width="100%">
 <tr>
@@ -2687,11 +3006,11 @@ go<br />
 </tr>
 <tr>
 <td>
-<p align="left"><a href="Warr9.htm#265">Key_1</a>
+<p align="left"><a href="Warr9.htm#271">Key_1</a>
 </p>
 </td>
 <td>
-<p align="left"><a href="Warr9.htm#265">Key_1</a>
+<p align="left"><a href="Warr9.htm#271">Key_1</a>
 </p>
 </td>
 <td>
@@ -2701,10 +3020,10 @@ go<br />
 </tr>
 </table><br />
 <h2>
-<a name="265">Key Key_1 of the table ProductWarranty</a> 
+<a name="271">Key Key_1 of the table ProductWarranty</a> 
 </h2>
 <h3>
-<a name="266">Card of the key Key_1 of the table ProductWarranty</a> 
+<a name="272">Card of the key Key_1 of the table ProductWarranty</a> 
 </h3>
 <table class="Form" border="1" cellspacing="1" width="100%">
 <tr>
@@ -2713,7 +3032,7 @@ go<br />
 </p>
 </td>
 <td width="75%">
-<p align="left"><a href="Warr9.htm#265">Key_1</a>
+<p align="left"><a href="Warr9.htm#271">Key_1</a>
 </p>
 </td>
 </tr>
@@ -2723,7 +3042,7 @@ go<br />
 </p>
 </td>
 <td width="75%">
-<p align="left"><a href="Warr9.htm#265">Key_1</a>
+<p align="left"><a href="Warr9.htm#271">Key_1</a>
 </p>
 </td>
 </tr>
@@ -2739,7 +3058,7 @@ go<br />
 </tr>
 </table><br />
 <h3>
-<a name="267">Code preview of the key Key_1 of the table ProductWarranty</a> 
+<a name="273">Code preview of the key Key_1 of the table ProductWarranty</a> 
 </h3>
 <table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
 <p align="left">alter table ProductWarranty<br />
@@ -2750,7 +3069,7 @@ go<br />
 </td></tr>
 </table><br />
 <h3>
-<a name="268">List of columns of the table key Key_1</a> 
+<a name="274">List of columns of the table key Key_1</a> 
 </h3>
 <table class="Grid" border="1" cellspacing="1" width="100%">
 <tr>
@@ -2775,7 +3094,7 @@ go<br />
 </tr>
 </table><br />
 <h3>
-<a name="269">List of extended attributes of the table key Key_1</a> 
+<a name="275">List of extended attributes of the table key Key_1</a> 
 </h3>
 <table class="Grid" border="1" cellspacing="1" width="100%">
 <tr>

@@ -89,7 +89,7 @@ go<br />
 /* Table: Customers                                             */<br />
 /*==============================================================*/<br />
 create table Customers (<br />
-   CustomerId           int                  not null,<br />
+   WarrantyOwnerId      int                  not null,<br />
    FirstName            varchar(50)          not null,<br />
    LastName             varchar(50           not null,<br />
    Gender               smallint             not null,<br />
@@ -99,7 +99,7 @@ create table Customers (<br />
    Phone                varchar(20)          not null,<br />
    CreationDate         datetime             not null,<br />
    Enable               bit                  not null,<br />
-   constraint PK_CUSTOMERS primary key (CustomerId)<br />
+   constraint PK_CUSTOMERS primary key (WarrantyOwnerId)<br />
 )<br />
 go<br />
 
@@ -354,11 +354,11 @@ go<br />
 </tr>
 <tr>
 <td>
-<p align="left"><a href="Warr6.htm#22">CustomerId</a>
+<p align="left"><a href="Warr6.htm#22">WarrantyOwnerId</a>
 </p>
 </td>
 <td>
-<p align="left"><a href="Warr6.htm#22">CustomerId</a>
+<p align="left"><a href="Warr6.htm#22">WarrantyOwnerId</a>
 </p>
 </td>
 </tr>
@@ -454,10 +454,10 @@ go<br />
 </tr>
 </table><br />
 <h2>
-<a name="22">Column CustomerId of the table Customers</a> 
+<a name="22">Column WarrantyOwnerId of the table Customers</a> 
 </h2>
 <h3>
-<a name="23">Card of the column CustomerId of the table Customers</a> 
+<a name="23">Card of the column WarrantyOwnerId of the table Customers</a> 
 </h3>
 <table class="Form" border="1" cellspacing="1" width="100%">
 <tr>
@@ -466,7 +466,7 @@ go<br />
 </p>
 </td>
 <td width="75%">
-<p align="left"><a href="Warr6.htm#22">CustomerId</a>
+<p align="left"><a href="Warr6.htm#22">WarrantyOwnerId</a>
 </p>
 </td>
 </tr>
@@ -476,7 +476,7 @@ go<br />
 </p>
 </td>
 <td width="75%">
-<p align="left"><a href="Warr6.htm#22">CustomerId</a>
+<p align="left"><a href="Warr6.htm#22">WarrantyOwnerId</a>
 </p>
 </td>
 </tr>
@@ -502,15 +502,15 @@ go<br />
 </tr>
 </table><br />
 <h3>
-<a name="24">Check constraint name of the column CustomerId of the table Customers</a> 
+<a name="24">Check constraint name of the column WarrantyOwnerId of the table Customers</a> 
 </h3>
 <table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
-<p align="left">CKC_CUSTOMERID_CUSTOMER
+<p align="left">CKC_WARRANTYOWNERID_CUSTOMER
 </p>
 </td></tr>
 </table><br />
 <h3>
-<a name="25">Check of the column CustomerId of the table Customers</a> 
+<a name="25">Check of the column WarrantyOwnerId of the table Customers</a> 
 </h3>
 <table class="Form" border="1" cellspacing="1" width="100%">
 <tr>
@@ -605,7 +605,7 @@ go<br />
 </tr>
 </table><br />
 <h3>
-<a name="26">Server validation rule of the column CustomerId of the table Customers</a> 
+<a name="26">Server validation rule of the column WarrantyOwnerId of the table Customers</a> 
 </h3>
 <table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
 <p align="left">%MINMAX% and %LISTVAL% and %UPPER% and %LOWER% and %RULES%
@@ -613,7 +613,7 @@ go<br />
 </td></tr>
 </table><br />
 <h3>
-<a name="27">List of all dependencies of the table column CustomerId</a> 
+<a name="27">List of all dependencies of the table column WarrantyOwnerId</a> 
 </h3>
 <table class="Grid" border="1" cellspacing="1" width="100%">
 <tr>
@@ -632,35 +632,35 @@ go<br />
 </tr>
 <tr>
 <td>
-<p align="left">?
+<p align="left"><a href="Warr6.htm#84">Key_1</a>
 </p>
 </td>
 <td>
-<p align="left">?
+<p align="left"><a href="Warr6.htm#84">Key_1</a>
 </p>
 </td>
 <td>
-<p align="left">Reference Join
+<p align="left">Key
 </p>
 </td>
 </tr>
 <tr>
 <td class="TD2">
-<p align="left"><a href="Warr6.htm#84">Key_1</a>
+<p align="left">?
 </p>
 </td>
 <td class="TD2">
-<p align="left"><a href="Warr6.htm#84">Key_1</a>
+<p align="left">?
 </p>
 </td>
 <td class="TD2">
-<p align="left">Key
+<p align="left">Reference Join
 </p>
 </td>
 </tr>
 </table><br />
 <h3>
-<a name="28">List of extended attributes of the table column CustomerId</a> 
+<a name="28">List of extended attributes of the table column WarrantyOwnerId</a> 
 </h3>
 <table class="Grid" border="1" cellspacing="1" width="100%">
 <tr>
@@ -3714,11 +3714,11 @@ go<br />
 </tr>
 <tr>
 <td>
-<p align="left"><a href="Warr6.htm#22">CustomerId</a>
+<p align="left"><a href="Warr6.htm#22">WarrantyOwnerId</a>
 </p>
 </td>
 <td>
-<p align="left"><a href="Warr6.htm#22">CustomerId</a>
+<p align="left"><a href="Warr6.htm#22">WarrantyOwnerId</a>
 </p>
 </td>
 </tr>
