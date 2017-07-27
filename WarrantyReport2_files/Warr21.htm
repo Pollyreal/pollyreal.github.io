@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
-<title>WarrantyReport2
+<title>WarrantyReport
 </title>
 <link href="LightBlue_Theme.css" type="text/css" rel="stylesheet">
 </head>
@@ -40,7 +40,7 @@
 </p>
 </td>
 <td width="75%">
-<p align="left"><a href="Warr7.htm#42">Customers</a>
+<p align="left"><a href="Warr15.htm#515">WarrantyOwners</a>
 </p>
 </td>
 </tr>
@@ -50,7 +50,7 @@
 </p>
 </td>
 <td width="75%">
-<p align="left"><a href="Warr15.htm#522">WarrantyCards</a>
+<p align="left"><a href="Warr14.htm#442">WarrantyCards</a>
 </p>
 </td>
 </tr>
@@ -61,14 +61,14 @@
 <table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
 <p align="left">if exists (select 1<br />
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')<br />
-   where r.fkeyid = object_id('WarrantyCards') and o.name = 'FK_WARRANTY_REFERENCE_CUSTOMER')<br />
+   where r.fkeyid = object_id('WarrantyCards') and o.name = 'FK_WARRANTY_REFERENCE_WARRANTY')<br />
 alter table WarrantyCards<br />
-   drop constraint FK_WARRANTY_REFERENCE_CUSTOMER<br />
+   drop constraint FK_WARRANTY_REFERENCE_WARRANTY<br />
 go<br />
 <br />
 alter table WarrantyCards<br />
-   add constraint FK_WARRANTY_REFERENCE_CUSTOMER foreign key (WarrantyOwnerId)<br />
-      references Customers (WarrantyOwnerId)<br />
+   add constraint FK_WARRANTY_REFERENCE_WARRANTY foreign key (WarrantyOwnerId)<br />
+      references WarrantyOwners (WarrantyOwnerId)<br />
 go<br />
 
 </p>
@@ -115,11 +115,11 @@ go<br />
 </tr>
 <tr>
 <td>
-<p align="left"><a href="Warr7.htm#53">WarrantyOwnerId</a>
+<p align="left"><a href="Warr15.htm#526">WarrantyOwnerId</a>
 </p>
 </td>
 <td>
-<p align="left"><a href="Warr15.htm#539">WarrantyOwnerId</a>
+<p align="left"><a href="Warr14.htm#459">WarrantyOwnerId</a>
 </p>
 </td>
 </tr>

@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
-<title>WarrantyReport2
+<title>WarrantyReport
 </title>
 <link href="LightBlue_Theme.css" type="text/css" rel="stylesheet">
 </head>
@@ -73,13 +73,6 @@
 <table class="Text" border="1" cellpadding="3" cellspacing="1" width="100%"><tr><td>
 <p align="left">if exists (select 1<br />
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')<br />
-   where r.fkeyid = object_id('Customers') and o.name = 'FK_CUSTOMER_REFERENCE_COUNTRY')<br />
-alter table Customers<br />
-   drop constraint FK_CUSTOMER_REFERENCE_COUNTRY<br />
-go<br />
-<br />
-if exists (select 1<br />
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')<br />
    where r.fkeyid = object_id('ProductWarranty') and o.name = 'FK_PRODUCTW_REFERENCE_COUNTRY')<br />
 alter table ProductWarranty<br />
    drop constraint FK_PRODUCTW_REFERENCE_COUNTRY<br />
@@ -89,6 +82,13 @@ if exists (select 1<br />
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')<br />
    where r.fkeyid = object_id('WarrantyCards') and o.name = 'FK_WARRANTY_REFERENCE_COUNTRY')<br />
 alter table WarrantyCards<br />
+   drop constraint FK_WARRANTY_REFERENCE_COUNTRY<br />
+go<br />
+<br />
+if exists (select 1<br />
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')<br />
+   where r.fkeyid = object_id('WarrantyOwners') and o.name = 'FK_WARRANTY_REFERENCE_COUNTRY')<br />
+alter table WarrantyOwners<br />
    drop constraint FK_WARRANTY_REFERENCE_COUNTRY<br />
 go<br />
 <br />
