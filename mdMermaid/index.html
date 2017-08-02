@@ -115,23 +115,26 @@
     mermaid.initialize({ startOnLoad: true });
     var data = {
       graph: `graph LR
-    A[SAS]
-    B[CRM]
-    C[Demandware]
-    D[ePOS]
-    E[Others]
-    F[SAP]
-    G[WarrantyDB]
-    A-->|get products data| F
-    F-->|?add & update products| A
-    B-->|add new warranty directly?| G
-    D-->B
-    C-->|post new warranty| A
-    C-->|?update warranties| A
-    C-->|get warranty limit by EAN| A
-    E-->|get warranties by keyword| A
+A[SAS] 
 
-    A-->|crud db| G
+C[Demandware]
+D[ePOS]
+E[Others]
+F[SAP]
+G[WarrantyDB]
+A-->|get products data| F
+F-->|?add & update products| A
+
+
+D-->C
+C-->|1 post new warranty| A
+C-->|2 ?update warranties| A
+C-->|3 get product details <br> and warranty limit by EAN| A
+C-->|4 get warranties by keyword| A
+E-->|4 get warranties by keyword| A
+
+A-->|crud db| G
+
 `,
       isFirst: true
 };
