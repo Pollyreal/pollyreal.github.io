@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## 怎么找回失去的语言能力
 
